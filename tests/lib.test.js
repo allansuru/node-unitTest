@@ -52,3 +52,11 @@ describe('getCurrencies', () => {
     });
 });
 
+describe('getProduct', () => {
+    it('shoud return the product with given id', () => {
+        const result = lib.getProduct(1);
+        expect(result).toMatchObject({ 'id': 1 });
+        expect(result).toHaveProperty('name', 'Feijão');
+    });
+});
+
