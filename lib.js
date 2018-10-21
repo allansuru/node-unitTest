@@ -36,9 +36,9 @@ module.exports.applyDiscount = function(order) {
     order.totalPrice *= 0.9; 
 }
 
-// // Mock functions 
-// module.exports.notifyCustomer = function(order) { 
-//   const customer = db.getCustomerSync(order.customerId);
+// Mock functions 
+module.exports.notifyCustomer = function(order) { 
+  const customer = db.getCustomerSync(order.customerId);
 
-//   mail.send(customer.email, 'Your order was placed successfully.');
-// }
+  mail.send(customer.email, 'Your order was placed successfully.');
+}
